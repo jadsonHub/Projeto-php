@@ -11,7 +11,7 @@ class Home
         // die();
        return [
            'view' => 'home.php',
-           'dados' => ['title' => "Home", 'users' =>  $users]
+           'dados' => ['title' => "Home", 'users' =>  $users,'estadoHome' => 'active']
        ];
       
     }
