@@ -7,9 +7,11 @@ class Home
    public static function index($parametros)
     {
         $users = all('user');
+        // var_dump($users);
+        // die();
        return [
            'view' => 'home.php',
-           'dados' => ['title' => "Home"]
+           'dados' => ['title' => "Home", 'users' =>  $users]
        ];
       
     }

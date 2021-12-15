@@ -9,7 +9,8 @@
             "app/router/Router.php",
             "app/core/controller.php",
             "app/database/conect.php",
-            "app/database/select.php"
+            "app/database/select.php",
+            "app/helpers/redirect.php"
         ],
         "psr-4": {
             "app\\" :"app"

@@ -7,7 +7,17 @@ class User
 {
    public static function show($parametros)
     {
-        echo 'show User';
+        $user = buscar('user',$parametros['user']);
+
+        if(!$user or !$parametros['user']){
+           return redirecionarPara('/');
+        }
+
         
+        return [
+            'view' => 'detalhes.php',
+            'dados' => ['title' => "Detalhes", 'user' =>  $user]
+        ];
+          
     }
 }

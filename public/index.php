@@ -6,14 +6,22 @@ try {
 
     $dados = Router();
 
+   
+
     if(!isset($dados['dados'])){
         throw new Exception("O indice dados esta faltando");
     }
    
+    if(!isset($dados['dados']['title'])){
+        throw new Exception("O indice title esta faltando");
+    }
 
     if (!isset($dados['view'])) {
         throw new Exception("O indice view esta faltando");
     }
+     
+    
+
     if (!file_exists(VIEWS . $dados['view'])) {
         throw new Exception("A pagina " . $dados['view'] . "não existe!");
     }
