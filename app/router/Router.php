@@ -8,7 +8,8 @@ function Routers()
         '/' => 'Home@Index',
         '/user/create' => 'User@create',
         '/user/home' => 'User@home',
-        '/user/[0-9]+' => 'User@show'
+        '/user/[0-9]+' => 'User@show',
+        '/login' => 'User@login'
     ];
 }
 

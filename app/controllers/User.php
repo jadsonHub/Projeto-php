@@ -16,12 +16,16 @@ class User
 
         return [
             'view' => 'detalhes.php',
-            'dados' => ['title' => "Detalhes", 'user' =>  $user]
+            'dados' => ['title' => "Detalhes", 'user' =>  $user,'estadoDetalhes' => 'active']
         ];
     }
 
     public static function login()
     {
+        return [
+            'view' => 'login.php',
+            'dados' => ['title' => "Login",'estadoLogin' => 'active']
+        ];
         
     }
 }

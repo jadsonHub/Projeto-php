@@ -1,4 +1,5 @@
-<div class=" my-5">
+<br><br><br><br><br>
+
 
   <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
@@ -47,5 +48,5 @@
   <!-- Copyright -->
 </footer>
   
-</div>
+
 <!-- End of .container -->

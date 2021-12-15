@@ -10,10 +10,10 @@
                     <a class="nav-link <?php echo $estadoHome; ?> text-white" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white <?php echo $estadoCadastrar; ?>" href="#">Cadastrar</a>
+                    <a class="nav-link text-white <?php echo $estadoCadastrar; ?>" href="/user/create">Cadastrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white <?php echo $estadoLogin; ?>" href="#">Login</a>
+                    <a class="nav-link text-white <?php echo $estadoLogin; ?>" href="/login">Login</a>
                 </li>
             </ul>
 
@@ -25,17 +25,17 @@
     </div>
 </nav>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-   
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="/assets/img/imagem1.jpg" class="d-block w-100 img-fluid" style="height: 500px; width: 600px;" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="/assets/img/imagem2.jpg" class="d-block w-100  img-fluid" style="height: 500px; width: 600px;" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="/assets/img/imagem3.jpg" class="d-block w-100 img-fluid" style="height: 500px; width: 600px;" alt="...">
-        </div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/assets/img/imagem1.jpg"class="d-block w-100" style="height: 500px; width: 600px;"alt="...">
     </div>
+    <div class="carousel-item">
+      <img src="/assets/img/imagem2.jpg"class="d-block w-100" style="height: 500px; width: 600px;"alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/assets/img/imagem3.jpg"class="d-block w-100" style="height: 500px; width: 600px;"alt="...">
+    </div>
+  </div>
 </div>
+
