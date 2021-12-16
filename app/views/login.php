@@ -1,6 +1,6 @@
 <br><br><br><br>
 <div class="col d-flex justify-content-center" style="margin-bottom: 100px;">
-    <h1 style="font-size:70px;"><?php echo $title; ?></h1>
+    <h1 style="font-size:70px;" class="text-white"><?php echo $title; ?></h1>
 </div>
 <div class="col d-flex justify-content-center text-white">
 
