@@ -8,3 +8,15 @@
     width: 200px;
     
 }
+input[type="file"] {
+    display: none;
+}
+.btn-img-perfil{
+    padding: 10px 10px;
+    width: 200px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-flex;
+}

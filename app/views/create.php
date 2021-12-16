@@ -7,19 +7,24 @@
 
     <div class="card bg-dark" style="width: 60rem;">
         <div class="card-body">
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation"  method="post" enctype="multipart/form-data" validate>
 
 
                 <div class="text-center">
                     <div class="d-flex justify-content-center">
-                        <img src="/assets/img/imagem1.jpg" class=" img-perfil rounded-circle" alt="...">
+                        <img src="/assets/img/imagem1.jpg"  id='img_perfil' class="img-perfil rounded-circle" alt="...">
                     </div>
-                    <label for="nome" class="form-label">Adicionar foto de Perfil</label>
+                    <div>
+                        <label class="btn-img-perfil bg-danger" for="arquivo">Adicionar foto de perfil</label>
+                        <input type="file" name="arquivo" id="arquivo" accept="image/*" onchange="loadFile(event);">
+                    </div>
+
+
                 </div>
                 <div class="col-md-4 position-relative">
                     <label for="nome" class="form-label">Primeiro nome</label>
                     <input type="text" class="form-control" id="nome" name="p_nome" required>
-                    <div class="valid-tooltip">
+                    <div class=" text-white valid-tooltip">
                         Looks good!
                     </div>
                 </div>
@@ -63,3 +68,4 @@
         </div>
     </div>
 </div>
+

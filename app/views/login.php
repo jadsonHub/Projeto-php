@@ -7,11 +7,11 @@
     <div class="card bg-dark" style="width: 30rem;">
         <div class="card-body">
             <form>
-              
-                    <div class="d-flex justify-content-center">
-                        <img src="/assets/img/imagem1.jpg" class=" img-perfil rounded-circle" alt="...">
-                    </div>
-              
+
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/img/imagem1.jpg" class=" img-perfil rounded-circle" alt="...">
+                </div>
+
                 <div class="mb-3">
                     <label for="usuario" class="form-label">Usuário</label>
                     <input type="text" class="form-control" id="usuarioLogin" required>

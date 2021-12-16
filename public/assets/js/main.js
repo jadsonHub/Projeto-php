@@ -3,26 +3,14 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   interval: 2000,
   wrap: false,
   touch:false
-})
+});
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-$(function () {
-  'use strict'
-  alert('iai')
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
+var loadFile = function(event) {
+  var output = document.getElementById('img_perfil');
+  output.src = URL.createObjectURL(event.target.files[0]);
+  output.onload = function() {
+    URL.revokeObjectURL(output.src) // free memory
+  }
+};
