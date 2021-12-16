@@ -15,7 +15,7 @@
     <title><?php echo $title; ?></title>
 </head>
 
-<body>
+<body class="bg-black">
 
     <div>
         <?php require 'partials/header.php'; ?>

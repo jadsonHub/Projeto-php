@@ -16,7 +16,7 @@ class User
 
         return [
             'view' => 'detalhes.php',
-            'dados' => ['title' => "Detalhes", 'user' =>  $user,'estadoDetalhes' => 'active']
+            'dados' => ['title' => "Detalhes", 'user' =>  $user, 'estadoDetalhes' => 'active']
         ];
     }
 
@@ -24,8 +24,15 @@ class User
     {
         return [
             'view' => 'login.php',
-            'dados' => ['title' => "Login",'estadoLogin' => 'active']
+            'dados' => ['title' => "Login", 'estadoLogin' => 'active']
         ];
-        
+    }
+
+    public static function create()
+    {
+        return [
+            'view' => 'create.php',
+            'dados' => ['title' => "Criar conta", 'estadoCreate' => 'active']
+        ];
     }
 }
