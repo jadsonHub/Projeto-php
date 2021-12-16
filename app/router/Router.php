@@ -9,7 +9,9 @@ function Routers()
         '/user/create' => 'User@create',
         '/user/home' => 'User@home',
         '/user/[0-9]+' => 'User@show',
-        '/login' => 'User@login'
+        '/login' => 'User@login',
+        '/update' => 'User@update',
+        '/recuperar' => 'User@recuperarConta'
     ];
 }
 

@@ -35,4 +35,22 @@ class User
             'dados' => ['title' => "Criar conta", 'estadoCreate' => 'active']
         ];
     }
+
+    public static function update()
+    {
+        return [
+            'view' => 'create.php',
+            'dados' => ['title' => "Atualizar dados"]
+        ];
+    }
+
+    public static function recuperarConta()
+    {
+
+        return [
+            'view' => 'recuperar.php',
+            'dados' => ['title' => "Recuperar conta", 'validado' => 0]
+        ];
+    }
+
 }
