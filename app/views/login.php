@@ -9,7 +9,7 @@
             <form>
 
                 <div class="d-flex justify-content-center">
-                    <img src="/assets/img/imagem1.jpg" class=" img-perfil rounded-circle" alt="...">
+                    <img src="/assets/img/login.gif" class=" img-perfil rounded-circle" alt="...">
                 </div>
 
                 <div class="mb-3">
