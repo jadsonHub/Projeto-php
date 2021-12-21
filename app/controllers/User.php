@@ -7,7 +7,7 @@ class User
 {
     public static function show($parametros)
     {
-        $user = buscar('user', $parametros['user']);
+        $user = buscar('user', 'id_user', $parametros['user']);
 
         if (!$user or !$parametros['user']) {
             return redirecionarPara('/');
@@ -29,11 +29,11 @@ class User
     }
 
     //rota post
-    public static function logar(){
-        $senha = $_POST['senhaLogin'];
-        $login = $_POST['usuarioLogin'];
+    public static function logar()
+    {
+        $senha = self::validarLogin('senhaLogin','senha');
+        $login = self::validarLogin('usuarioLogin','login');
         
-
     }
 
     public static function create()
@@ -68,12 +68,11 @@ class User
                 'dados' => ['title' => "Recuperar conta", 'validado' => 2]
             ];
         }
-        
-            return [
-                'view' => 'recuperar.php',
-                'dados' => ['title' => "Recuperar conta", 'validado' => 0]
-            ];
-        
+
+        return [
+            'view' => 'recuperar.php',
+            'dados' => ['title' => "Recuperar conta", 'validado' => 0]
+        ];
     }
 
     private static function validarEmail()
@@ -92,5 +91,20 @@ class User
             return 2;
         }
         return 2;
+    }
+
+   
+    private static function validarLogin($nomePost,$colunaDB)
+    {
+
+        $validar = filter_input(INPUT_POST, $nomePost, FILTER_SANITIZE_STRING);
+        $validarDB = buscar('user',$colunaDB,$validar);
+        
+        
+        if ($validar === $validarDB->$colunaDB) {
+            return true;
+        }
+        return false;
+        
     }
 }

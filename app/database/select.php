@@ -14,12 +14,12 @@ function all($tabela){
 
 }
 
-function buscar($tabela,$id){
+function buscar($tabela,$coluna,$valor){
 
     try{
         $conect = conect();
 
-        $query = $conect->query("select * from {$tabela} where id_user = {$id};");
+        $query = $conect->query("select * from " . $tabela . " where " . $coluna . " = ". $valor .';');
         return $query->fetch();
 
     }catch(PDOException $e){
