@@ -60,21 +60,21 @@ class User
                 'dados' => ['title' => "Recuperar conta", 'validado' => 2]
             ];
         }
-        if (self::validarEmail() === 0 && self::validarToken() === 0) {
+        
             return [
                 'view' => 'recuperar.php',
                 'dados' => ['title' => "Recuperar conta", 'validado' => 0]
             ];
-        }
+        
     }
 
     private static function validarEmail()
     {
 
         if ($_POST['email_rec'] === 'jadson@gmail.com') {
-            return 1;
+            return 2;
         }
-        return 0;
+        return 1;
     }
 
     private static function validarToken()
