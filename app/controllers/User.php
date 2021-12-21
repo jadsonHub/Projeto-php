@@ -47,10 +47,42 @@ class User
     public static function recuperarConta()
     {
 
-        return [
-            'view' => 'recuperar.php',
-            'dados' => ['title' => "Recuperar conta", 'validado' => 0]
-        ];
+        if (self::validarEmail() === 1) {
+            return [
+                'view' => 'recuperar.php',
+                'dados' => ['title' => "Recuperar conta", 'validado' => 1]
+            ];
+        }
+
+        if (self::validarToken() === 2) {
+            return [
+                'view' => 'recuperar.php',
+                'dados' => ['title' => "Recuperar conta", 'validado' => 2]
+            ];
+        }
+        if (self::validarEmail() === 0 && self::validarToken() === 0) {
+            return [
+                'view' => 'recuperar.php',
+                'dados' => ['title' => "Recuperar conta", 'validado' => 0]
+            ];
+        }
     }
 
+    private static function validarEmail()
+    {
+
+        if ($_POST['email_rec'] === 'jadson@gmail.com') {
+            return 1;
+        }
+        return 0;
+    }
+
+    private static function validarToken()
+    {
+
+        if ($_POST['token_rec'] === 'jhdhdsad') {
+            return 2;
+        }
+        return 2;
+    }
 }
