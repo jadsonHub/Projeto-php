@@ -5,13 +5,21 @@ function Routers()
 {
 
     return [
-        '/' => 'Home@Index',
-        '/user/create' => 'User@create',
-        '/user/home' => 'User@home',
-        '/user/[0-9]+' => 'User@show',
-        '/login' => 'User@login',
-        '/update' => 'User@update',
-        '/recuperar' => 'User@recuperarConta'
+        'POST' => [
+            '/login' => "User@logar"
+        ],
+
+        'GET' => [
+            '/' => 'Home@Index',
+            '/user/create' => 'User@create',
+            '/user/home' => 'User@home',
+            '/user/[0-9]+' => 'User@show',
+            '/login' => 'User@login',
+            '/update' => 'User@update',
+            '/recuperar' => 'User@recuperarConta'
+
+        ]
+
     ];
 }
 
@@ -64,13 +72,14 @@ function Router()
 
     //rota fixa do projeto
     $routes = Routers();
+    $tipoRequisao = $_SERVER['REQUEST_METHOD'];
 
     //uri fixa
-    $uriFixa = uriFixa($uri, $routes);
+    $uriFixa = uriFixa($uri, $routes[$tipoRequisao]);
 
     if (empty($uriFixa)) {
 
-        $uriFixa =  expresaoRegular($uri, $routes);
+        $uriFixa =  expresaoRegular($uri, $routes[$tipoRequisao]);
         $uri = explode('/', ltrim($uri, '/'));
         $parametros = parametros($uri, $uriFixa);
         $parametros = formatarParametros($uri, $parametros);

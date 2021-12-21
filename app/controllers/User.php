@@ -28,6 +28,14 @@ class User
         ];
     }
 
+    //rota post
+    public static function logar(){
+        $senha = $_POST['senhaLogin'];
+        $login = $_POST['usuarioLogin'];
+        
+
+    }
+
     public static function create()
     {
         return [

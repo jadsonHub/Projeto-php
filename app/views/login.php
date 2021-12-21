@@ -6,18 +6,18 @@
 
     <div class="card bg-dark" style="width: 30rem;">
         <div class="card-body">
-            <form>
+            <form method="POST" action="/login" >
                 <div class="d-flex justify-content-center">
                     <img src="/assets/img/login.gif" class=" img-perfil rounded-circle" alt="...">
                 </div>
 
                 <div class="mb-3">
                     <label for="usuario" class="form-label">Usuário</label>
-                    <input type="text" class="form-control" id="usuarioLogin" required>
+                    <input type="text" class="form-control" id="usuarioLogin" name='usuarioLogin'required>
                 </div>
                 <div class="mb-3">
                     <label for="senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senhaLogin" name="senha" required>
+                    <input type="password" class="form-control" id="senhaLogin" name="senhaLogin" required>
                 </div>
                 <button type="submit" class="btn btn-danger text-end">Entrar</button>
             </form>
