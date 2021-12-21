@@ -21,8 +21,13 @@
                 </div>
                 <button type="submit" class="btn btn-danger text-end">Entrar</button>
             </form>
+            <br>
+            <a href="/recuperar" class="text-white">Esqueceu a senha/user? clique aqui!</a>
+
         </div>
+        
     </div>
+    
 </div>
 
 

@@ -1,9 +1,7 @@
 <div class="col d-flex justify-content-center" style="margin-bottom: 100px;">
     <h1 class="text-white" style="font-size:70px;"><?php echo $title; ?></h1>
 </div>
-<?php
-var_dump($validado);
-if ($validado === 1) { ?>
+<?php if ($validado === 1) { ?>
     <form action="" method="post">
         <div class="col d-flex justify-content-center text-white">
 
