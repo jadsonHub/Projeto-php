@@ -32,7 +32,9 @@ class User
     public static function logar()
     {
        if(logarUser()){
-
+           redirecionarPara('/');
+       }else{
+           redirecionarPara('/login');
        }
     }
 
