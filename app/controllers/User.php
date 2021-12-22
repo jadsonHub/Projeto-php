@@ -7,7 +7,7 @@ class User
 {
     public static function show($parametros)
     {
-        $user = buscar('user', 'id_user', $parametros['user']);
+        $user = executarSQL("select * from user where id_user = {$parametros['user']};");
 
         if (!$user or !$parametros['user']) {
             return redirecionarPara('/');
@@ -31,9 +31,9 @@ class User
     //rota post
     public static function logar()
     {
-        $senha = self::validarLogin('senhaLogin','senha');
-        $login = self::validarLogin('usuarioLogin','login');
-        
+       if(logarUser()){
+           
+       }
     }
 
     public static function create()
@@ -42,6 +42,15 @@ class User
             'view' => 'create.php',
             'dados' => ['title' => "Criar conta", 'estadoCreate' => 'active']
         ];
+    }
+
+    //post
+
+    public static function createPost()
+    {
+       if(criarConta()){
+
+       }
     }
 
     public static function update()
@@ -91,20 +100,5 @@ class User
             return 2;
         }
         return 2;
-    }
-
-   
-    private static function validarLogin($nomePost,$colunaDB)
-    {
-
-        $validar = filter_input(INPUT_POST, $nomePost, FILTER_SANITIZE_STRING);
-        $validarDB = buscar('user',$colunaDB,$validar);
-        
-        
-        if ($validar === $validarDB->$colunaDB) {
-            return true;
-        }
-        return false;
-        
     }
 }

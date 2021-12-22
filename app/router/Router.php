@@ -6,7 +6,8 @@ function Routers()
 
     return [
         'POST' => [
-            '/login' => "User@logar"
+            '/login' => "User@logar",
+            '/create' => "User@createPost"
         ],
 
         'GET' => [

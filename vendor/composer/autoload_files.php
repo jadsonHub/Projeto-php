@@ -12,4 +12,6 @@ return array(
     '7c1195d26a84529632761ba8cc1ced9f' => $baseDir . '/app/database/conect.php',
     '28e137b7b337c21343bce6e9acbc0ab5' => $baseDir . '/app/database/select.php',
     '4773a89e1978c181311a93c4c6048aa0' => $baseDir . '/app/helpers/redirect.php',
+    '9b93b02748d12a3443d6caa8adb31fd3' => $baseDir . '/app/helpers/loginUser.php',
+    '04427bc62dc79c71becf2fdb35d06903' => $baseDir . '/app/helpers/createUser.php',
 );

@@ -11,3 +11,5 @@ create table if not exists user(
     senha varchar(35) not null,
     img_perfil varchar(255)
 );
+
+insert into user(p_nome,s_nome,email,token,login,senha)values('teste 02','010101','@txt','13123123','jad','4545');

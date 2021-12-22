@@ -1,6 +1,6 @@
 <?php 
 
-function all($tabela){
+function listarTodos($tabela){
 
     try{
         $conect = conect();
@@ -14,12 +14,12 @@ function all($tabela){
 
 }
 
-function buscar($tabela,$coluna,$valor){
+function executarSQL($sql){
 
     try{
         $conect = conect();
 
-        $query = $conect->query("select * from " . $tabela . " where " . $coluna . " = ". $valor .';');
+        $query = $conect->query($sql);
         return $query->fetch();
 
     }catch(PDOException $e){

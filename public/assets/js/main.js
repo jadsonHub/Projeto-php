@@ -8,7 +8,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 
 var loadFile = function(event) {
-  var output = document.getElementById('img_perfil');
+  var output = document.getElementById('img_perfil_user');
   output.src = URL.createObjectURL(event.target.files[0]);
   output.onload = function() {
     URL.revokeObjectURL(output.src) // free memory
