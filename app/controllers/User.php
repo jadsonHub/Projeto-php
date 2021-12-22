@@ -32,7 +32,7 @@ class User
     public static function logar()
     {
        if(logarUser()){
-           
+
        }
     }
 
@@ -49,7 +49,9 @@ class User
     public static function createPost()
     {
        if(criarConta()){
-
+            redirecionarPara('/');
+       }else{
+           redirecionarPara('/user/creat');
        }
     }
 

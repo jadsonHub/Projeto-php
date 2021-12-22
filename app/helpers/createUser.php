@@ -50,13 +50,11 @@ function criarConta()
                 $error[$indice] = 'preencha o campo ' . $value;
             }
         }
-
         var_dump($error);
-        die();
     } else {
 
-        var_dump('lindooo');
-        die();
+
+
 
         foreach ($campos as $indice => $value) {
             $colunas = $colunas . $indice . ',';
@@ -67,9 +65,9 @@ function criarConta()
         $semVirgulaColunas = rtrim($colunas, ',');
 
 
-        // $sql = "insert into user({$semVirgulaColunas})values({$semVirgulaValor});";
-        // $rodei = executarSQL($sql);
-        // var_dump($rodei);
+        $sql = "insert into user({$semVirgulaColunas})values({$semVirgulaValor});";
+        executarSQL($sql);
 
+        return true;
     }
 }
