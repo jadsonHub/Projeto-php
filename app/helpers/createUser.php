@@ -53,6 +53,7 @@ function criarConta()
             }
         }
         var_dump($error);
+        die();
     } else {
 
 

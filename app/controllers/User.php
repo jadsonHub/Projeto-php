@@ -53,7 +53,7 @@ class User
        if(criarConta()){
             redirecionarPara('/');
        }else{
-           redirecionarPara('/user/creat');
+           redirecionarPara('/user/create');
        }
     }
 
