@@ -15,4 +15,8 @@ return array(
     '9b93b02748d12a3443d6caa8adb31fd3' => $baseDir . '/app/helpers/loginUser.php',
     '04427bc62dc79c71becf2fdb35d06903' => $baseDir . '/app/helpers/createUser.php',
     '5dbb94672fa0b039b85a87d17aa490f2' => $baseDir . '/app/helpers/upload.php',
+    'a9902749e245492579d964c31ce80ebc' => $baseDir . '/app/helpers/sendEmail.php',
+    '11bdde06c33e62769e1ae8ba0e6181d4' => $baseDir . '/app/phpmailer/PHPMailer.php',
+    '188fe255e80245542a7c281ef26a269d' => $baseDir . '/app/phpmailer/SMTP.php',
+    '9f22afbf805d4edace4e0d4411826de9' => $baseDir . '/app/phpmailer/Exception.php',
 );

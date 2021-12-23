@@ -13,15 +13,18 @@ function criarConta()
     $error = array();
 
     $campos = array(
-        'p_nome' => filter_input(INPUT_POST,'p_nome',FILTER_SANITIZE_STRING),
-        's_nome' => filter_input(INPUT_POST,'s_nome',FILTER_SANITIZE_STRING),
-        'email' => filter_input(INPUT_POST,'email',FILTER_SANITIZE_EMAIL),
-        'login' => filter_input(INPUT_POST,'login',FILTER_SANITIZE_STRING),
-        'senha' => filter_input(INPUT_POST,'senha',FILTER_SANITIZE_STRING),
+        'p_nome' => filter_input(INPUT_POST, 'p_nome', FILTER_SANITIZE_STRING),
+        's_nome' => filter_input(INPUT_POST, 's_nome', FILTER_SANITIZE_STRING),
+        'email' => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL),
+        'login' => filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING),
+        'senha' => filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING),
         'img_perfil' => salvarImagem('img_perfil')
     );
 
-   
+
+    enviarEmail('jadsoneduardo6@gmail.com','Cadastro',mensagemEmail('cadastro'));
+        die();
+
     foreach ($campos as $indice => $value) {
         if (empty($campos[$indice])) {
             $error[$indice] = 'preencha este campo ' . $indice;
@@ -65,8 +68,13 @@ function criarConta()
         $semVirgulaColunas = rtrim($colunas, ',');
 
 
+
+
+
         $sql = "insert into user({$semVirgulaColunas})values({$semVirgulaValor});";
         executarSQL($sql);
+        enviarEmail($campos['email'],'cadastro',mensagemEmail('cadastro'));
+        die();
 
         return true;
     }

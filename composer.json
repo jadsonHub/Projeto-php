@@ -1,7 +1,8 @@
 {
     "name": "jadson/progphp.com",
     "require": {
-        "php" : "7.3"
+        "php" : "7.3",
+        "phpmailer/phpmailer": "^6.5"
     },
     "autoload": {
         "files": [
@@ -13,7 +14,11 @@
             "app/helpers/redirect.php",
             "app/helpers/loginUser.php",
             "app/helpers/createUser.php",
-            "app/helpers/upload.php"
+            "app/helpers/upload.php",
+            "app/helpers/sendEmail.php",
+            "app/phpmailer/PHPMailer.php",
+            "app/phpmailer/SMTP.php",
+            "app/phpmailer/Exception.php"
         ],
         "psr-4": {
             "app\\" :"app"
