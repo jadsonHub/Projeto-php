@@ -22,8 +22,7 @@ function criarConta()
     );
 
 
-    enviarEmail('jadsoneduardo6@gmail.com','Cadastro',mensagemEmail('cadastro'));
-        die();
+   
 
     foreach ($campos as $indice => $value) {
         if (empty($campos[$indice])) {
@@ -74,8 +73,6 @@ function criarConta()
         $sql = "insert into user({$semVirgulaColunas})values({$semVirgulaValor});";
         executarSQL($sql);
         enviarEmail($campos['email'],'cadastro',mensagemEmail('cadastro'));
-        die();
-
         return true;
     }
 }
