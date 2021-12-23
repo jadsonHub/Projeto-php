@@ -14,4 +14,5 @@ return array(
     '4773a89e1978c181311a93c4c6048aa0' => $baseDir . '/app/helpers/redirect.php',
     '9b93b02748d12a3443d6caa8adb31fd3' => $baseDir . '/app/helpers/loginUser.php',
     '04427bc62dc79c71becf2fdb35d06903' => $baseDir . '/app/helpers/createUser.php',
+    '5dbb94672fa0b039b85a87d17aa490f2' => $baseDir . '/app/helpers/upload.php',
 );

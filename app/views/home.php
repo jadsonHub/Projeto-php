@@ -3,6 +3,9 @@
 <?php foreach ($users as $user) { ?>
 
 
-   <?php echo $user->p_nome; ?> || <li> <a href="<?php echo "/user/$user->id_user"; ?>">Ir para detalhes</a> </li>
+  <p class="text-white">  <?php echo $user->p_nome; ?> </p>|| <li> <a href="<?php echo "/user/$user->id_user"; ?>">Ir para detalhes</a> </li>
 
+  <img src="<?php echo  $user->img_perfil; ?>" class=" img-perfil rounded-circle" alt="...">
+
+  <img  alt="">
 <?php } ?>

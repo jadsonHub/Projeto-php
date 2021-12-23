@@ -13,15 +13,15 @@ function criarConta()
     $error = array();
 
     $campos = array(
-        'p_nome' => $_POST['p_nome'],
-        's_nome' => $_POST['s_nome'],
-        'email' => $_POST['email'],
-        'login' => $_POST['login'],
-        'senha' => $_POST['senha'],
-        'img_perfil' => $_FILES['img_perfil']['tmp_name']
+        'p_nome' => filter_input(INPUT_POST,'p_nome',FILTER_SANITIZE_STRING),
+        's_nome' => filter_input(INPUT_POST,'s_nome',FILTER_SANITIZE_STRING),
+        'email' => filter_input(INPUT_POST,'email',FILTER_SANITIZE_EMAIL),
+        'login' => filter_input(INPUT_POST,'login',FILTER_SANITIZE_STRING),
+        'senha' => filter_input(INPUT_POST,'senha',FILTER_SANITIZE_STRING),
+        'img_perfil' => salvarImagem('img_perfil')
     );
 
-
+   
     foreach ($campos as $indice => $value) {
         if (empty($campos[$indice])) {
             $error[$indice] = 'preencha este campo ' . $indice;
